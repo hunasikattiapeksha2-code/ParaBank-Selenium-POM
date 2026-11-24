@@ -1,34 +1,61 @@
-# parabank-web-selenium
-This project is a test automation of the [ParaBank](https://parabank.parasoft.com/parabank/index.htm), a demo site that simulates a realistic
-online banking website, and it uses Selenium Webdriver and Java technologies.
+# ParaBank Selenium POM Automation
 
-Important: the automation is not covering all the website functionalities.
+An end-to-end UI test automation framework built with **Java**, **Selenium WebDriver**, **JUnit 5**, and **Maven** using the **Page Object Model (POM)** design pattern for the [ParaBank](https://parabank.parasoft.com/parabank/index.htm) demo banking web application.
 
-## Prerequisites
-- JDK 11.8.18;
-- Maven 3.8.1;
-- Selenium Webdriver 4.9.0;
-- ChromeDriver 114.0.5735.90;
-- JUnit 5.9.3.
+## Project Architecture & Structure
 
-Note: the versions defined above can be equal or higher.
+The framework separates page locators and user interactions from test assertions for maintainability and reusability:
 
-## Usage
-To use this project, clone it on your machine and open it on your favorite IDE.
+```text
+parabank-web-selenium/
+├── src/test/java/
+│   └── com/parasoft/parabank/
+│       ├── PageObject.java        # Base page initialization & WebDriver utilities
+│       ├── register/
+│       │   ├── RegisterPage.java  # User registration form locators & actions
+│       │   └── RegisterTest.java  # Test cases for new customer registration
+│       ├── overview/
+│       │   ├── OverviewPage.java  # Account overview page elements & methods
+│       │   └── OverviewTest.java  # Test cases verifying account balances & details
+│       └── home/
+│           └── HomeTest.java      # Login & home page validation tests
+└── pom.xml                        # Maven dependencies & build configuration
+```
 
-To run the test automation, you can simply run all the tests located  at the `src/test/java` dir. This is possible
-because the ParaBank application is already running on a web server. 
+## Tech Stack & Prerequisites
 
-But if you would like to run only one test case, you can open the
-[`RegisterTest.java`](https://github.com/tiagocbarbosa/parabank-web-selenium/blob/main/src/test/java/org/parasoft/parabank/register/RegisterTest.java)
-file as an example, and run its tests.
+- **Java Development Kit (JDK):** 11 or higher
+- **Build & Dependency Management:** Maven 3.8.1+
+- **Browser Automation:** Selenium WebDriver 4.9.0+
+- **Test Runner:** JUnit 5 (Jupiter) 5.9.3+
+- **Browser Driver:** Google Chrome & matching ChromeDriver (managed automatically via Selenium Manager)
 
-Once you run the tests, Selenium Webdriver will open a browser and execute the steps defined on the test file.
+## Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/hunasikattiapeksha2-code/ParaBank-Selenium-POM.git](https://github.com/hunasikattiapeksha2-code/ParaBank-Selenium-POM.git)
+cd ParaBank-Selenium-POM/parabank-web-selenium
+```
+
+### 2. Run All Tests via Maven
+```bash
+mvn clean test
+```
+
+### 3. Run Individual Tests in Eclipse
+1. Import the project into Eclipse as an **Existing Maven Project**.
+2. Navigate to `src/test/java` and open any test class (such as [`RegisterTest.java`](src/test/java/com/parasoft/parabank/register/RegisterTest.java) or [`OverviewTest.java`](src/test/java/com/parasoft/parabank/overview/OverviewTest.java)).
+3. Right-click inside the file and select **Run As → JUnit Test**.
+
+## Automated Scenarios Covered
+
+- **Customer Registration:** Validates form field inputs, account creation confirmation, and error handling for incomplete data.
+- **User Authentication:** Verifies valid and invalid login flows on the ParaBank home portal.
+- **Account Overview:** Confirms post-login account summary table visibility, account numbers, and balance formatting.
 
 ## References
 
-[Selenium Webdriver documentation](https://www.selenium.dev/documentation/webdriver/)
-
-[ParaBank website](https://parabank.parasoft.com/parabank/index.htm)
-
-[Download the Chromedriver](https://chromedriver.chromium.org/downloads)
+- [ParaBank Demo Application](https://parabank.parasoft.com/parabank/index.htm)
+- [Selenium WebDriver Documentation](https://www.selenium.dev/documentation/webdriver/)
+- [JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
