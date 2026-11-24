@@ -1,11 +1,12 @@
-package org.parasoft.parabank.home;
+package com.parasoft.parabank.home;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.parasoft.parabank.PageObject;
-import org.parasoft.parabank.contact.ContactPage;
-import org.parasoft.parabank.overview.OverviewPage;
-import org.parasoft.parabank.register.RegisterPage;
+
+import com.parasoft.parabank.PageObject;
+import com.parasoft.parabank.contact.ContactPage;
+import com.parasoft.parabank.overview.OverviewPage;
+import com.parasoft.parabank.register.RegisterPage;
 
 public class HomePage extends PageObject {
 

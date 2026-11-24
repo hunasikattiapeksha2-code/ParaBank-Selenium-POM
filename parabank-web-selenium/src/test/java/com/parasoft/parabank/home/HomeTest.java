@@ -1,4 +1,4 @@
-package org.parasoft.parabank.home;
+package com.parasoft.parabank.home;
 
 import org.junit.jupiter.api.Test;
 

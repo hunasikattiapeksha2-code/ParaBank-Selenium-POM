@@ -1,10 +1,11 @@
-package org.parasoft.parabank.overview;
+package com.parasoft.parabank.overview;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.parasoft.parabank.home.HomePage;
-import org.parasoft.parabank.register.RegisterPage;
+
+import com.parasoft.parabank.home.HomePage;
+import com.parasoft.parabank.register.RegisterPage;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

@@ -1,9 +1,10 @@
-package org.parasoft.parabank.overview;
+package com.parasoft.parabank.overview;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.parasoft.parabank.PageObject;
+
+import com.parasoft.parabank.PageObject;
 
 public class OverviewPage extends PageObject {
 

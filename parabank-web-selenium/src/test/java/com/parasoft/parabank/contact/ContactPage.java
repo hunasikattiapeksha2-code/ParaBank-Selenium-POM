@@ -1,8 +1,9 @@
-package org.parasoft.parabank.contact;
+package com.parasoft.parabank.contact;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.parasoft.parabank.PageObject;
+
+import com.parasoft.parabank.PageObject;
 
 public class ContactPage extends PageObject {
 

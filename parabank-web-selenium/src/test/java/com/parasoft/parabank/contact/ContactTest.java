@@ -1,9 +1,10 @@
-package org.parasoft.parabank.contact;
+package com.parasoft.parabank.contact;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.parasoft.parabank.home.HomePage;
+
+import com.parasoft.parabank.home.HomePage;
 
 public class ContactTest {
 
